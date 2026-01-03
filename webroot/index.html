@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Net Switch Enhanced 🌐</title>
+  <script type="module" crossorigin src="script.js"></script>
+  <link rel="stylesheet" crossorigin href="style.css" />
+</head>
+<body class="root_layout">
+  <div id="toast" class="toast"></div>
+
+  <main class="container">
+    <!-- Title Bar -->
+    <div class="title-bar">
+      <h1 id="module-name" class="title">Net Switch Enhanced 🌐</h1>
+      <label class="theme-switch" title="Toggle light/dark mode">
+        <input type="checkbox" id="theme-toggle" />
+        <span class="slider"></span>
+      </label>
+    </div>
+    <p class="subtitle">Block internet access per app</p>
+
+    <!-- Search -->
+    <div class="card search-card">
+      <input type="search" id="search" placeholder="Search App" class="search-input" />
+    </div>
+
+    <!-- App List -->
+    <div class="card apps-card">
+      <!-- Counter + Unblock All -->
+      <div class="button-row">
+        <span id="blocked-counter" class="counter">0</span>
+        <button id="unblock-all-btn" class="btn success unblock-all-btn">Unblock All</button>
+      </div>
+      <div id="apps-list" class="apps-list"></div>
+    </div>
+
+    <!-- Terminal -->
+    <div class="card terminal">
+      <div class="terminal-header">
+        <div class="dots">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+        </div>
+        <span class="term-title">Terminal Output</span>
+        <button id="clear-output" class="clear-btn">Clear</button>
+      </div>
+      <div class="terminal-body" id="output-log"></div>
+    </div>
+  </main>
+
+  <!-- App Template - Tricky Style -->
+  <template id="app-template">
+    <div class="app-item">
+      <div class="app-icon-container">
+        <div class="loader"></div>
+        <img class="app-icon" />
+      </div>
+      <div class="app-info">
+        <div class="app-name"></div>
+        <div class="package-name"></div>
+      </div>
+      <label class="switch">
+        <input type="checkbox" class="app-toggle">
+        <span class="slider-switch"></span>
+      </label>
+    </div>
+  </template>
+</body>
+</html>

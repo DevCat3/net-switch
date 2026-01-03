@@ -1,0 +1,7 @@
+id=net-switch
+name=Net Switch Enhanced
+version=2.1
+versionCode=61
+author=Rem01Gaming & DevCat3
+description=Isolate apps from Internet access.
+updateJson=https://raw.githubusercontent.com/DevCat3/net-switch/main/update.json
